@@ -1,0 +1,35 @@
+/* =========================================================
+   Page layout & shared utilities
+   - 모바일 기준 360px 폭. 태블릿(≥768) / PC(≥1280) 에서 확장.
+   ========================================================= */
+.page {
+  width: 100%;
+  max-width: var(--container-mobile);
+  margin: 0 auto;
+  overflow-x: clip; /* 자동 롤링 등 오버플로 컨텐츠가 본문 가로를 늘리지 않도록 */
+}
+
+.section {
+  position: relative;
+  width: 100%;
+}
+
+.section__inner {
+  padding-left: var(--page-pad-x-mobile);
+  padding-right: var(--page-pad-x-mobile);
+}
+
+/* 공통 타이포 헬퍼 */
+.t-h1   { font-size: var(--fs-h1);   line-height: var(--lh-h1);   font-weight: var(--fw-h1); }
+.t-h2   { font-size: var(--fs-h2);   line-height: var(--lh-h2);   font-weight: var(--fw-h2); }
+.t-h3   { font-size: var(--fs-h3);   line-height: var(--lh-h3);   font-weight: var(--fw-h3); }
+.t-h4   { font-size: var(--fs-h4);   line-height: var(--lh-h4);   font-weight: var(--fw-h4); }
+.t-subL { font-size: var(--fs-subL); line-height: var(--lh-subL); font-weight: var(--fw-subL); }
+.t-sub  { font-size: var(--fs-sub);  line-height: var(--lh-sub);  font-weight: var(--fw-sub); }
+.t-bodyL-b { font-size: var(--fs-bodyL); line-height: var(--lh-bodyL); font-weight: var(--fw-bodyL-b); }
+.t-bodyL   { font-size: var(--fs-bodyL); line-height: var(--lh-bodyL); font-weight: var(--fw-bodyL); }
+.t-body-b  { font-size: var(--fs-body);  line-height: var(--lh-body);  font-weight: var(--fw-body-b); }
+.t-body    { font-size: var(--fs-body);  line-height: var(--lh-body);  font-weight: var(--fw-body); }
+.t-caption-b { font-size: var(--fs-caption);  line-height: var(--lh-caption);  font-weight: var(--fw-caption-b); }
+.t-caption   { font-size: var(--fs-caption);  line-height: var(--lh-caption);  font-weight: var(--fw-caption); }
+.t-captionS  { font-size: var(--fs-captionS); line-height: var(--lh-captionS); font-weight: var(--fw-captionS); }

@@ -1,0 +1,95 @@
+/* =========================================================
+   Design Tokens — extracted from Figma variables
+   ========================================================= */
+:root {
+  /* ---------- Brand / Primary ---------- */
+  --color-main:            #0088FF;
+  --color-main-dark:       #0B1137;
+  --color-sub:             #00FBFF;
+  --color-primary:         #FDD808;
+
+  /* opacity tints of main */
+  --color-main-10:         #E5F3FF;
+  --color-main-20:         #CCE7FF;
+
+  /* gradient (정확한 stop 값은 섹션별 hero에서 가져옴) */
+  --grad-main:             linear-gradient(135deg, #0088FF 0%, #00FBFF 100%);
+
+  /* ---------- Brand sub-colors ---------- */
+  --color-kid-sci:         #F12E41;
+  --color-kid-sci-10:      #FDEAEC;
+  --color-kid-ma:          #1E489A;
+  --color-kid-ma-10:       #EAF2FB;
+  --color-sci:             #2F7BD4;
+  --color-sci-10:          #E8EDF5;
+  --color-popcorn:         #FDD808;
+  --color-air:             #6D2EF2;
+  --color-dl:              #42ACBB;
+  --color-jisatam:         #68B724;
+  --color-space:           #5707CE;
+
+  /* monthly */
+  --color-month-main:      #FFE8A2;
+  --color-month-sub:       #FF2B80;
+
+  /* ---------- Gray scale ---------- */
+  --color-white:           #FFFFFF;
+  --color-gray-50:         #F7F7F7;
+  --color-gray-100:        #EEEEEE;
+  --color-gray-200:        #CCCCCC;
+  --color-gray-300:        #888888;
+  --color-gray-400:        #666666;
+  --color-gray-600:        #555555;
+  --color-gray-800:        #333333;
+  --color-gray-900:        #212121;
+
+  /* aliases */
+  --color-text:            var(--color-gray-900);
+  --color-text-sub:        var(--color-gray-400);
+  --color-icon:            var(--color-gray-900);
+  --color-bg:              var(--color-white);
+
+  /* ---------- Typography ---------- */
+  --font-family-base: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+                      system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+                      "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+
+  /* letter-spacing: Figma의 -4 단위는 -0.04em으로 환산 */
+  --ls-tight: -0.04em;
+
+  /* font-size / line-height / weight */
+  --fs-h1: 40px;        --lh-h1: 56px;        --fw-h1: 800;
+  --fs-h2: 36px;        --lh-h2: 48px;        --fw-h2: 700;
+  --fs-h3: 32px;        --lh-h3: 40px;        --fw-h3: 700;
+  --fs-h4: 28px;        --lh-h4: 40px;        --fw-h4: 700;
+  --fs-subL: 24px;      --lh-subL: 28px;      --fw-subL: 700;
+  --fs-sub: 20px;       --lh-sub: 28px;       --fw-sub: 700;
+
+  --fs-bodyL: 16px;     --lh-bodyL: 24px;     --fw-bodyL-b: 700;  --fw-bodyL: 400;
+  --fs-bodyM: 16px;     --lh-bodyM: 20px;     --fw-bodyM-b: 700;
+  --fs-body: 14px;      --lh-body: 20px;      --fw-body-b: 700;   --fw-body-m: 500; --fw-body: 400;
+  --fs-bodyS: 12px;     --lh-bodyS: 20px;     --fw-bodyS: 400;
+  --fs-caption: 12px;   --lh-caption: 16px;   --fw-caption-b: 600; --fw-caption: 400;
+  --fs-captionS: 10px;  --lh-captionS: 16px;  --fw-captionS: 500;
+
+  /* ---------- Effects ---------- */
+  --shadow-normal: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  /* ---------- Layout ---------- */
+  --bp-tablet: 768px;
+  --bp-pc:     1280px;
+
+  --container-mobile: 360px;
+  --container-tablet: 768px;
+  --container-pc:     1280px;
+
+  --page-pad-x-mobile: 20px;
+  --page-pad-x-tablet: 40px;
+  --page-pad-x-pc:     80px;
+
+  /* radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+}

@@ -1,0 +1,1418 @@
+/* =========================================================
+   Responsive — tablet ≥768, pc ≥1280
+   모바일 기본 스타일을 덮어쓰는 형태로 작성됩니다.
+   ========================================================= */
+
+/* ─────────────────────────────────────────────────────────
+   TABLET ≥768px
+   ───────────────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  .page {
+    max-width: var(--container-tablet); /* 768px */
+  }
+  .section__inner {
+    padding-left: var(--page-pad-x-tablet);
+    padding-right: var(--page-pad-x-tablet);
+  }
+
+  /* ── Section 1: Hero ── */
+  .hero {
+    padding: 80px 0;
+  }
+  .hero__row > li {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* ── Section 2: Quote ── */
+  .quote {
+    padding: 80px 40px;
+  }
+  .quote__image {
+    max-width: 320px;
+  }
+
+  /* ── Section 3: Concerns ── */
+  .concerns {
+    padding: 80px 40px;
+  }
+  .concerns__list {
+    max-width: 688px;
+  }
+
+  /* ── Section 4: Reasons ── */
+  .reasons {
+    padding: 80px 40px;
+  }
+  .reasons__list {
+    max-width: 688px;
+  }
+
+  /* ── Section 5: Benefits ── */
+  .benefits {
+    padding: 80px 40px;
+  }
+  .benefits__list {
+    max-width: 688px;
+  }
+
+  /* ── Section 6: Gifts ── */
+  .gifts {
+    padding: 80px 40px;
+  }
+  .gifts__list {
+    max-width: 688px;
+  }
+
+  /* ── Section 7: Quiz intro ── */
+  .quiz__inner {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  /* ── Sections 8~10 cards — wider ── */
+  .kid-sci__card {
+    width: 240px;
+  }
+  .kid-sci__card--news .kid-sci__card-img-wrap,
+  .kid-sci__card--curriculum .kid-sci__card-img-wrap {
+    width: 240px;
+  }
+  .kid-ma__card--curriculum {
+    width: 240px;
+    min-width: 240px;
+  }
+  .kid-ma__card-img-wrap {
+    width: 240px;
+  }
+
+  /* ── Section 12: Smart ── */
+  .s12__work {
+    padding: 80px 40px;
+  }
+  .s12__platform {
+    padding: 80px 40px;
+  }
+
+  /* ── Sections 14~16 ── */
+  .s14__cards {
+    max-width: 688px;
+    margin: 0 auto;
+  }
+  .s16__cards {
+    padding: 0 40px;
+  }
+
+  /* ── Notice section 23 ── */
+  .section--notice {
+    padding: 60px 40px 100px;
+  }
+  .s23__list {
+    max-width: 688px;
+  }
+
+  /* ── Sticky CTA ── */
+  .sticky-cta {
+    max-width: var(--container-tablet);
+  }
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   PC ≥1280px
+   ───────────────────────────────────────────────────────── */
+@media (min-width: 1280px) {
+  .page {
+    max-width: none; /* 배경 전체 폭으로, 콘텐츠는 각 섹션 내부에서 1080px 제한 */
+  }
+  .section__inner {
+    padding-left: var(--page-pad-x-pc);
+    padding-right: var(--page-pad-x-pc);
+  }
+
+  /* ── Section 1: Hero ── */
+  .hero {
+    padding: 120px 0;
+  }
+  .hero__contents {
+    gap: 28px;
+  }
+  .hero__title-overline {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .hero__title-main {
+    font-size: 60px;
+    line-height: 80px;
+  }
+  .hero__badges .badge {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 4px 16px;
+  }
+  .hero__sub {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .hero__rolling {
+    margin-top: 40px;
+    gap: 16px;
+    filter: none;
+  }
+  .hero__track {
+    gap: 16px;
+    animation-duration: 36s;
+  }
+  .hero__track--bottom {
+    animation-duration: 42s;
+  }
+  .hero__row {
+    gap: 16px;
+  }
+  .hero__row > li {
+    width: 120px;
+    height: 158px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  @keyframes hero-roll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(calc(-50% - 8px)); }
+  }
+  @keyframes hero-roll-reverse {
+    from { transform: translateX(calc(-50% - 8px - 40px)); }
+    to   { transform: translateX(-40px); }
+  }
+
+  /* ── Section 2: Quote ── */
+  .quote {
+    padding: 120px max(20px, calc((100% - 1080px) / 2));
+  }
+  .quote__text {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .quote__image {
+    max-width: 360px;
+  }
+  .quote__body {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  /* 두 block span을 inline으로 → <br> 하나로만 줄바꿈 = 2줄 */
+  .quote__line {
+    display: inline;
+  }
+
+  /* ── Section 3: Concerns ── */
+  .concerns {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 120px max(20px, calc((100% - 1080px) / 2));
+    gap: 60px;
+  }
+  .concerns__title {
+    flex: 0 0 380px;
+    text-align: left;
+    font-size: 40px;
+    line-height: 56px;
+    padding-top: 20px;
+  }
+  .concerns__list {
+    flex: 0 0 490px;
+    max-width: 490px;
+  }
+  .concerns__label {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.96px;
+  }
+  .concerns__body {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  /* ── Section 4: Reasons ── */
+  .reasons {
+    padding: 120px max(20px, calc((100% - 1080px) / 2));
+    align-items: center;
+  }
+  .reasons__title {
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+  }
+  /* 4 block spans → inline, br로 2줄 분리 */
+  .reasons__line {
+    display: inline;
+  }
+  .reasons__br-pc {
+    display: inline;
+  }
+  .reasons__list {
+    flex-direction: row;
+    max-width: 100%;
+    gap: 0;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+  .reasons__item {
+    flex: 1;
+    min-height: 280px;
+  }
+  .reasons__content {
+    padding: 40px 32px 12px;
+    gap: 20px;
+  }
+  .reasons__label {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.96px;
+  }
+  .reasons__body {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.64px;
+  }
+  .reasons__media {
+    height: 120px;
+  }
+  .reasons__media--box img {
+    top: 40px;
+  }
+  .reasons__media--book img {
+    top: 40px;
+  }
+  .reasons__bag-img {
+    top: 10px;
+    right: 10px;
+  }
+  .reasons__mag--1 {
+    width: 68px;
+    right: 124px;
+    top: 64px;
+    bottom: auto;
+  }
+  .reasons__mag--2 {
+    right: 100px;
+    top: 48px;
+    bottom: auto;
+  }
+
+  /* ── Section 5: Benefits ── */
+  .benefits {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 120px max(20px, calc((100% - 1080px) / 2));
+    gap: 20px;
+  }
+  .benefits__title {
+    flex: 1;
+    text-align: left;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -1.44px;
+  }
+  .benefits__list {
+    flex: 1;
+    max-width: none;
+  }
+  .benefits__item {
+    gap: 24px;
+    padding: 40px 20px;
+  }
+  .benefits__num {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  .benefits__label {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.96px;
+  }
+  .benefits__sublabel {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.8px;
+  }
+  .benefits__body {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.64px;
+  }
+  .benefits__image {
+    height: 140px;
+  }
+  .benefits__img--mag {
+    width: 101px;
+    height: 133px;
+    left: calc(50% - 1.5px);
+    top: calc(50% - 1.5px);
+  }
+  .benefits__img--phone {
+    width: 120px;
+    height: 120px;
+    left: calc(50% + 66px);
+    top: calc(50% + 14px);
+  }
+  .benefits__img--work1 {
+    width: 70px;
+    height: 100px;
+    left: calc(50% - 81px);
+    top: calc(50% + 13px);
+  }
+  .benefits__img--work2 {
+    width: 70px;
+    height: 100px;
+    left: calc(50% - 53px);
+    top: calc(50% + 18px);
+  }
+
+  /* ── Section 6: Gifts ── */
+  .gifts {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 120px max(20px, calc((100% - 1080px) / 2));
+    gap: 20px;
+  }
+  .gifts__title {
+    flex: 1;
+    text-align: left;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -1.44px;
+  }
+  .gifts__list {
+    flex: 1;
+    max-width: none;
+  }
+  .gifts__row--common {
+    padding: 20px;
+  }
+  .gifts__col {
+    padding: 20px;
+  }
+  .gifts__common-col {
+    width: auto;
+    flex: 1;
+  }
+  .gifts__item-title {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.8px;
+    white-space: nowrap;
+  }
+  .gifts__img-box--two {
+    height: 120px;
+  }
+  .gifts__img-box--one {
+    height: 120px;
+  }
+
+  /* ── Section 7: Quiz intro ── */
+  .quiz__inner {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .quiz__title {
+    font-size: 40px;
+    line-height: 56px;
+    letter-spacing: -1.6px;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  /* ── Tabs sticky ── */
+  .tabs-sticky__tab {
+    font-size: 16px;
+    height: 52px;
+  }
+  .tabs-sticky {
+    height: 52px;
+  }
+
+  /* ── Sections 8~10: Section layout ── */
+  .section--kid-sci,
+  .section--kid-ma {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  /* Section 8/9/10: header */
+  .kid-sci__header,
+  .kid-ma__header {
+    padding-left: max(20px, calc((100% - 1080px) / 2));
+    padding-right: max(20px, calc((100% - 1080px) / 2));
+  }
+  .kid-sci__heading {
+    font-size: 40px;
+    line-height: 56px;
+  }
+  .kid-sci__desc {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  /* Section 10: kid-ma sub feature */
+  .kid-ma__sub {
+    flex-direction: row;
+    gap: 20px;
+    padding: 40px max(20px, calc((100% - 1080px) / 2)) 20px;
+  }
+  .kid-ma__sub-item {
+    flex: 1;
+    max-width: none;
+    gap: 40px;
+  }
+  .kid-ma__sub-title {
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -1.12px;
+  }
+  .kid-ma__sub-img-area {
+    height: 260px;
+  }
+  .kid-ma__sub-img-frame {
+    width: 312px;
+    height: 260px;
+  }
+
+  /* Section 8: sub feature */
+  .kid-sci__sub {
+    flex-direction: row;
+    gap: 20px;
+    padding: 40px max(20px, calc((100% - 1080px) / 2)) 20px;
+  }
+  .kid-sci__sub-item {
+    flex: 1;
+    max-width: none;
+    gap: 40px;
+  }
+  .kid-sci__sub-title {
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -1.12px;
+  }
+  .kid-sci__sub-br {
+    display: none;
+  }
+  .kid-sci__sub-img-area {
+    height: 260px;
+  }
+  .kid-sci__sub-img-frame {
+    width: 312px;
+    height: 260px;
+  }
+
+  /* Covers wider */
+  .kid-sci__cover {
+    width: 140px;
+    height: 184px;
+  }
+
+  /* ── Sections 8~10 list title — PC ── */
+  .kid-sci__list-title { font-size: 28px; line-height: 40px; }
+  .kid-sci__list-sub   { font-size: 16px; line-height: 24px; }
+
+  /* ── Sections 8~9 kid-sci cards — PC ── */
+  .kid-sci__list { gap: 60px; }
+  .kid-sci__list-label { padding: 0 max(20px, calc((100% - 1080px) / 2)); }
+  .kid-sci__cards-scroll { padding-left: max(20px, calc((100% - 1080px) / 2)); gap: 16px; }
+  .kid-sci__cards-scroll .kid-sci__card:last-child { margin-right: max(20px, calc((100% - 1080px) / 2)); }
+
+  .kid-sci__card { width: 300px; border-radius: 12px; }
+
+  /* 과학뉴스 카드 */
+  .kid-sci__card--news { height: 180px; padding: 32px; }
+  .kid-sci__card-label { font-size: 20px; line-height: 28px; }
+  .kid-sci__card--news .kid-sci__card-img-wrap { width: 300px; height: 180px; }
+  .kid-sci__card--news .kid-sci__card-img-inner { right: -100px; top: 32px; width: 240px; height: 200px; }
+
+  /* 통합과학 카드 */
+  .kid-sci__card--curriculum { height: 240px; padding: 32px; }
+  .kid-sci__card--curriculum .kid-sci__card-img-wrap { width: 300px; height: 240px; }
+  .kid-sci__card-img-inner--curriculum { right: -100px; top: 80px; width: 240px; height: 200px; }
+  .kid-sci__card-contents { gap: 12px; }
+  .kid-sci__card-text { font-size: 20px; line-height: 28px; }
+
+  /* 특집기사 카드 */
+  .kid-sci__card--feature { height: 240px; padding: 32px 32px 0; }
+  .kid-sci__card-feature-title { font-size: 24px; line-height: 28px; letter-spacing: -0.96px; }
+  .kid-sci__card-img-inner--feature { bottom: -80px; width: 240px; height: 200px; }
+
+  /* ── Section 10 kid-ma cards — PC ── */
+  .kid-ma__list { gap: 60px; }
+  .kid-ma__list-label { padding: 0 max(20px, calc((100% - 1080px) / 2)); }
+  .kid-ma__cards-scroll { padding-left: max(20px, calc((100% - 1080px) / 2)); gap: 16px; }
+  .kid-ma__cards-scroll .kid-ma__card:last-child { margin-right: max(20px, calc((100% - 1080px) / 2)); }
+
+  .kid-ma__card--curriculum { width: 300px; min-width: 300px; height: 240px; border-radius: 12px; padding: 32px; }
+  .kid-ma__card-img-wrap { width: 300px; height: 240px; }
+  .kid-ma__card-img-frame { right: -100px; top: 80px; width: 240px; height: 200px; }
+  .kid-ma__card-contents { gap: 12px; }
+  .kid-ma__card-text { font-size: 20px; line-height: 28px; }
+
+  .kid-ma__play-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 0 max(20px, calc((100% - 1080px) / 2)); }
+  .kid-ma__play-card { height: 260px; padding: 32px 32px 0; gap: 12px; }
+  .kid-ma__play-title { font-size: 24px; line-height: 28px; letter-spacing: -0.96px; }
+  .kid-ma__play-img-wrap { width: 400px; height: 260px; }
+  .kid-ma__play-img-frame { width: 369px; height: 260px; }
+  .kid-ma__video-card { height: 260px; }
+
+  /* ── Section 9: sci__work — PC 2-column layout ── */
+  .sci__work {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 120px max(20px, calc((100% - 1080px) / 2));
+    align-items: start;
+  }
+  .sci__work-title {
+    text-align: left;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .sci__work-title p:first-child { font-size: 16px; line-height: 24px; }
+  .sci__work-title p:nth-child(2) { font-size: 36px; line-height: 48px; letter-spacing: -1.44px; }
+
+  .sci__work-list { border-radius: 24px; overflow: hidden; }
+  .sci__work-row--top { padding: 40px; border-radius: 0; }
+  .sci__work-line--plain,
+  .sci__work-line--gradient { font-size: 20px; line-height: 28px; }
+  .sci__work-logos { width: 160px; gap: 12px; }
+  .sci__logo-sci     { height: 32px; width: 77px; }
+  .sci__logo-sci-smart { height: 32px; width: 120px; }
+
+  .sci__work-cell {
+    padding: 40px;
+    gap: 8px;
+    align-items: center;
+    text-align: center;
+  }
+  .sci__work-cell--bl,
+  .sci__work-cell--br { border-radius: 0; }
+  .sci__work-cell-label { font-size: 14px; line-height: 20px; }
+  .sci__work-cell-value { font-size: 16px; line-height: 24px; }
+
+  /* ── Section 11: Smart intro ── */
+  .section--smart-intro {
+    padding: 120px max(20px, calc((100% - 1080px) / 2));
+  }
+  .smart-intro__heading {
+    font-size: 40px;
+    line-height: 56px;
+    font-weight: 800;
+    letter-spacing: -1.6px;
+  }
+
+  /* ── Section 12: Smart ── */
+  .s12__header {
+    padding: 0 max(20px, calc((100% - 1080px) / 2)) 120px;
+    gap: 8px;
+  }
+  .s12__header-sub { font-size: 16px; line-height: 24px; letter-spacing: -0.64px; }
+  .s12__header-title { gap: 12px; }
+  .s12__header-title p { font-size: 40px; line-height: 56px; font-weight: 800; letter-spacing: -1.6px; }
+  .s12__logo-smart { width: 225px; height: 60px; }
+  .s12__work {
+    padding: 120px 0;
+  }
+  .s12__work-inner {
+    max-width: 1080px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .s12__work-header {
+    flex: 1;
+    text-align: left;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+  .s12__work-header p:first-child {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.64px;
+  }
+  .s12__work-header p:last-child {
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 700;
+    letter-spacing: -1.44px;
+  }
+  .s12__work-contents {
+    flex: 1;
+    max-width: none;
+    align-items: flex-end;
+  }
+  .s12__work-contents .s12__list {
+    border-radius: 24px;
+  }
+  .s12__row--white {
+    padding: 40px;
+    min-height: 188px;
+  }
+  .s12__row-title p {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+  }
+  .s12__work-g-wrap {
+    width: 490px;
+    height: 188px;
+  }
+  .s12__work-g-frame {
+    width: 225px;
+    height: 172px;
+  }
+  .s12__red-cell {
+    padding: 40px;
+  }
+  .s12__red-cell-body p,
+  .s12__red-cell--arrow p,
+  .s12__red-cell--answer p {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.64px;
+  }
+  .s12__row-caption p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.56px;
+  }
+  .s12__row--pair {
+    align-items: stretch;
+  }
+  .s12__red-cell--arrow {
+    min-height: 150px;
+    padding: 0 40px;
+  }
+  .s12__arrow-img {
+    width: 108px;
+    height: 84px;
+  }
+  .s12__work-ex-cell {
+    height: 180px;
+  }
+  .s12__preview-btn span {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+
+  .s12__platform {
+    padding: 120px 0;
+  }
+  .s12__platform-inner {
+    max-width: 1080px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .s12__platform-header {
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 40px;
+  }
+  .s12__platform-title {
+    flex: none;
+    align-items: flex-start;
+    text-align: left;
+    gap: 8px;
+  }
+  .s12__platform-title .t-body {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.64px;
+  }
+  .s12__platform-header > .t-body {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.64px;
+    text-align: left;
+  }
+  .s12__cards {
+    flex: 1;
+    flex-direction: column;
+    max-width: none;
+    gap: 4px;
+  }
+  .s12__card {
+    height: 260px;
+    padding: 40px 40px 32px;
+  }
+  .s12__card-img-wrap {
+    width: 440px;
+    height: 260px;
+  }
+  .s12__phone-frame {
+    width: 200px;
+    height: 410px;
+  }
+  .s12__card-text {
+    gap: 20px;
+  }
+  .s12__brand-row {
+    gap: 8px;
+  }
+  .s12__brand-row p {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.96px;
+  }
+  .s12__card-desc p {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.64px;
+  }
+
+  /* ── Section 13: Experience intro ── */
+  .s13__header {
+    padding: 120px max(20px, calc((100% - 1080px) / 2));
+  }
+  .s13__header p {
+    max-width: 1000px;
+    font-size: 40px;
+    line-height: 56px;
+    font-weight: 800;
+    letter-spacing: -1.6px;
+  }
+
+  /* ── Section 14: Offline ── */
+  .section--offline {
+    padding: 0;
+  }
+  .s14__inner {
+    max-width: 1080px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 120px 40px;
+    align-items: start;
+    box-sizing: border-box;
+  }
+  .s14__title {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .s14__cards {
+    flex-direction: column;
+    gap: 4px;
+    border-radius: 24px;
+    overflow: hidden;
+    max-width: none;
+    margin: 0;
+  }
+  .s14__card {
+    height: 260px;
+    flex: none;
+  }
+  .s14__card--museum {
+    flex: none;
+  }
+
+  /* ── Section 15: Awards ── */
+  .section--awards {
+    padding: 120px 0;
+  }
+  .s15__header {
+    padding: 0 max(20px, calc((100% - 1080px) / 2));
+  }
+
+  /* Awards scroll row */
+  .s15__awards-wrap {
+    width: 100%;
+    margin-left: 0;
+  }
+  .s15__awards {
+    gap: 20px;
+  }
+  .s15__award {
+    width: 120px;
+  }
+  .s15__award-img {
+    height: 120px;
+  }
+  .s15__award-img img {
+    width: 80px;
+    height: 80px;
+  }
+  .s15__award .t-captionS {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.56px;
+    color: #ccc;
+  }
+
+  /* Stats cards */
+  .s15__stats {
+    padding: 0 max(20px, calc((100% - 1080px) / 2));
+    flex-direction: row;
+    max-width: none;
+    gap: 20px;
+  }
+  .s15__stat-group {
+    flex: 1;
+    gap: 20px;
+  }
+  .s15__stat-cards {
+    gap: 16px;
+  }
+  .s15__stat-card {
+    padding: 32px;
+    border-radius: 12px;
+    background: #333333;
+  }
+  .s15__stat-card .t-caption {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.64px;
+  }
+  .s15__stat-card .t-sub {
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -1.12px;
+  }
+  .s15__badge {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @keyframes s15AwardsScroll {
+    /* 11 items × (120px + 20px gap) = 1540px per set */
+    to { transform: translateX(-1540px); }
+  }
+
+  /* ── Section 16: Daily ── */
+  .section--daily {
+    padding: 0;
+  }
+  .s16__inner {
+    max-width: 1080px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 120px 40px;
+    align-items: start;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .s16__title {
+    text-align: left;
+    align-self: start;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -1.44px;
+  }
+  .s16__contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+  }
+  .s16__slider {
+    width: 490px;
+    flex-shrink: 0;
+  }
+  .s16__slider-track {
+    height: 540px;
+  }
+  .s16__morning-bg {
+    width: 538px;
+    height: 538px;
+    top: -40px;
+  }
+  .s16__morning-card {
+    padding: 32px 40px;
+    gap: 20px;
+  }
+  .s16__morning-card .t-sub {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.96px;
+  }
+  .s16__morning-card .t-body {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.64px;
+  }
+  .s16__morning-img {
+    width: 100%;
+  }
+  .s16__morning-img > img {
+    object-position: bottom right;
+  }
+  .s16__morning-slide {
+    padding: 60px 40px 0;
+  }
+  .s16__cards {
+    max-width: none;
+    padding: 40px 0 0;
+    gap: 20px;
+    width: 490px;
+  }
+  .s16__card {
+    height: 240px;
+  }
+  .s16__card-bg > img {
+    left: 43.16%;
+    width: 56.84%;
+  }
+  .s16__card:nth-child(1) .s16__card-overlay {
+    background: linear-gradient(to right, #212121 44.432%, rgba(33,33,33,0) 72.276%);
+  }
+  .s16__card:nth-child(2) .s16__card-overlay {
+    background: linear-gradient(to right, #212121 47.045%, rgba(33,33,33,0) 72.276%);
+  }
+  .s16__card-text {
+    gap: 20px;
+  }
+  .s16__card-text .t-sub {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.96px;
+  }
+  .s16__card-text .t-body {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.64px;
+  }
+
+  /* ── Section 17: Reviews ── */
+  .section--reviews {
+    padding: 120px 0;
+    gap: 60px;
+  }
+  .s17__header {
+    padding: 0 max(20px, calc((100% - 1080px) / 2));
+    gap: 8px;
+  }
+  .s17__header > .t-h3 {
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -1.44px;
+  }
+
+  /* 카드 */
+  .s17__card {
+    width: 240px;
+  }
+  .s17__card-img {
+    width: 240px;
+    height: 240px;
+  }
+  .s17__card-body {
+    padding: 20px 24px 24px;
+    gap: 20px;
+  }
+  .s17__card-user {
+    gap: 8px;
+  }
+  .s17__grade {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.96px;
+  }
+  .s17__nick {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.48px;
+  }
+  .s17__score {
+    width: 96px;
+    height: 16px;
+  }
+  .s17__card-review {
+    gap: 12px;
+  }
+  .s17__card-review > .t-body {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.64px;
+  }
+  .s17__card-offset {
+    padding-top: 40px;
+  }
+
+  @keyframes s17Roll {
+    /* 7 cards × 240px + 6 gaps × 16px = 1776px */
+    to { transform: translateX(-1776px); }
+  }
+
+  /* ── Section 18: Recommend ── */
+  .section--recommend {
+    padding: 0;
+  }
+  .s18__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1080px;
+    width: 100%;
+    padding: 120px 40px;
+    box-sizing: border-box;
+    align-items: start;
+  }
+  .s18__title {
+    text-align: left;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -1.44px;
+  }
+  .s18__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    width: 100%;
+    max-width: none;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+  .s18__card {
+    flex: 1 0 0;
+    min-width: 200px;
+    width: auto;
+    height: auto;
+  }
+  .s18__card-imgs {
+    flex: none;
+    height: 120px;
+  }
+  .s18__line-b,
+  .s18__line {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.64px;
+  }
+
+  /* ── Section 19: Curriculum ── */
+  .section--curriculum {
+    padding: 0;
+  }
+  .s19__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1080px;
+    width: 100%;
+    padding: 120px 40px;
+    box-sizing: border-box;
+    align-items: start;
+  }
+  .s19__header {
+    gap: 40px;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0;
+  }
+  .s19__title {
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -1.44px;
+  }
+  .s19__desc {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.64px;
+  }
+  .s19__chart {
+    max-width: none;
+    width: 100%;
+    gap: 12px;
+    padding-bottom: 0;
+  }
+  .s19__graph { height: 400px; }
+  .s19__bars  { gap: 16px; }
+  .s19__bar   { height: 36px; }
+  .s19__label {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.56px;
+  }
+  .s19__bar {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.56px;
+  }
+
+  /* 바 너비 재계산 – 490px 기준 */
+  .s19__row--1 { padding: 0 0.82%; }
+  .s19__row--1 .s19__bar { width: 58.16%; }
+
+  .s19__row--2 { padding: 0 21.02%; }
+  .s19__row--2 .s19__bar { width: 58.37%; }
+
+  .s19__row--3 { padding: 0 0.82%; }
+  .s19__row--3 .s19__bar { width: 78.37%; }
+
+  .s19__row--4 { padding: 0 0.82%; }
+  .s19__row--4 .s19__bar { width: 38.16%; }
+
+  .s19__row--5 { padding: 0 0.82%; }
+  .s19__row--5 .s19__bar { width: 78.37%; }
+
+  .s19__row--6 { padding: 0 0.82%; }
+  .s19__row--6 .s19__bar { width: 78.37%; }
+
+  .s19__row--7 { padding: 0 0.82%; }
+  .s19__row--7 .s19__bar { width: 38.16%; }
+
+  /* ── Section 20: Subscribe ── */
+  .section--subscribe {
+    padding: 0;
+  }
+  .s20__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1080px;
+    width: 100%;
+    padding: 120px 40px;
+    box-sizing: border-box;
+    align-items: start;
+  }
+  .s20__title {
+    text-align: left;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -1.44px;
+  }
+  .s20__right {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* 폼 */
+  .s20__form     { max-width: none; gap: 32px; }
+  .s20__select-group { gap: 20px; }
+  .s20__select-title { gap: 4px; }
+  .s20__select-title .t-bodyL-b {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.8px;
+  }
+  .s20__hint {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.56px;
+  }
+  .s20__btn {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.64px;
+    border-radius: 12px;
+    padding: 24px 8px;
+    gap: 12px;
+  }
+  .s20__img-area { height: 100px; }
+  .s20__mag-only { width: 65px; height: 85px; }
+  .s20__smart-mag { width: 65px; height: 85px; }
+  .s20__air-wrap {
+    width: 84px;
+    height: 85px;
+    left: calc(50% + 44px);
+  }
+  .s20__work-1 {
+    width: 48px;
+    height: 68px;
+    left: calc(50% - 48px);
+    top: calc(50% + 9px);
+  }
+  .s20__work-2 {
+    width: 48px;
+    height: 68px;
+    left: calc(50% - 29px);
+    top: calc(50% + 12px);
+  }
+  .s20__cta {
+    height: 60px;
+    border-radius: 12px;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.8px;
+  }
+
+  /* 결과 */
+  .s20__result       { max-width: none; gap: 20px; }
+  .s20__result-block { gap: 16px; }
+  .s20__result-row .t-body-b {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.64px;
+  }
+  .s20__result-row .t-bodyL-b {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.8px;
+  }
+  .s20__detail-box {
+    gap: 16px;
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .s20__detail-row .t-caption {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.56px;
+  }
+  .s20__detail-row .t-body {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.64px;
+  }
+  .s20__order-block {
+    gap: 16px;
+    padding-top: 20px;
+  }
+  .s20__blue-box {
+    gap: 16px;
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .s20__blue-box .t-body-b {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.64px;
+  }
+
+  /* ── Section 21: Pricing ── */
+  .section--pricing {
+    padding: 120px max(20px, calc((100% - 1080px) / 2));
+  }
+
+  /* ── Section 22: FAQ ── */
+  .section--faq { padding: 0; }
+  .s22__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1080px;
+    width: 100%;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    align-items: start;
+  }
+  .s22__title {
+    text-align: left;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -1.44px;
+  }
+  .s22__list { max-width: none; width: 100%; margin: 0; }
+  .s22__header { padding: 20px 0; }
+  .s22__q { width: 16px; height: 20px; }
+  .s22__q-wrap { gap: 12px; }
+  .s22__q-wrap {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.64px;
+  }
+  .s22__body {
+    padding: 20px;
+    background: #f7f7f7;
+    border-radius: 8px;
+  }
+  .s22__ul {
+    background: none;
+    border-radius: 0;
+    padding: 0 0 0 18px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.56px;
+  }
+  .s22__ul--no-bullet { padding-left: 0; }
+
+  /* ── Section 23: Notice ── */
+  .section--notice { padding: 0; }
+  .s23__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1080px;
+    width: 100%;
+    padding: 80px 40px 100px;
+    box-sizing: border-box;
+    align-items: start;
+  }
+  .s23__title {
+    text-align: left;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -1.44px;
+  }
+  .s23__list { max-width: none; width: 100%; }
+  .s23__header { padding: 16px 20px; }
+  .s23__label {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.64px;
+  }
+  .s23__body { padding: 0 20px 20px; }
+  .s23__ul {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.56px;
+  }
+
+  /* ── Section 9: sci__table — PC 2-column layout ── */
+  .sci__table-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 120px max(20px, calc((100% - 1080px) / 2));
+    align-items: start;
+  }
+  .sci__table-title {
+    text-align: left;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -1.44px;
+  }
+  .sci__table {
+    max-width: none;
+    border-radius: 24px;
+  }
+  .sci__table-cell--label {
+    flex: 0 0 100px;
+    font-size: 14px;
+    padding: 16px;
+  }
+  .sci__table-cell {
+    font-size: 16px;
+    padding: 16px;
+  }
+  .sci__table-row--head .sci__table-cell {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+  .sci__table-row--head .sci__table-cell--label {
+    font-size: 14px;
+    padding: 12px 16px;
+    flex: 0 0 100px;
+  }
+
+  /* ── Sticky CTA ── */
+  .sticky-cta {
+    max-width: none;
+    padding: 12px max(20px, calc((100% - 1080px) / 2));
+  }
+  .sticky-cta__btn {
+    font-size: 18px;
+    height: 60px;
+  }
+}

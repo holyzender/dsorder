@@ -3710,7 +3710,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: var(--container-mobile);
+  max-width: 1080px; /* 모든 뷰포트에서 최대 1080px 제한 */
   padding: 8px;
   box-sizing: border-box;
   z-index: 200;

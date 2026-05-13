@@ -109,10 +109,7 @@
     max-width: 688px;
   }
 
-  /* ── Sticky CTA ── */
-  .sticky-cta {
-    max-width: 100%;
-  }
+  /* ── Sticky CTA ── 1080px은 sections.css 베이스에서 통합 관리 */
 }
 
 

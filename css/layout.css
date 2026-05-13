@@ -4,7 +4,7 @@
    ========================================================= */
 .page {
   width: 100%;
-  max-width: var(--container-mobile);
+  /* max-width 제거: 모바일/태블릿 뷰포트 전체 폭을 사용 */
   margin: 0 auto;
   overflow-x: clip; /* 자동 롤링 등 오버플로 컨텐츠가 본문 가로를 늘리지 않도록 */
 }

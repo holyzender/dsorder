@@ -7,9 +7,7 @@
    TABLET ≥768px
    ───────────────────────────────────────────────────────── */
 @media (min-width: 768px) {
-  .page {
-    max-width: var(--container-tablet); /* 768px */
-  }
+  /* .page max-width 제거: 태블릿도 뷰포트 전체 폭 사용 */
   .section__inner {
     padding-left: var(--page-pad-x-tablet);
     padding-right: var(--page-pad-x-tablet);
@@ -113,7 +111,7 @@
 
   /* ── Sticky CTA ── */
   .sticky-cta {
-    max-width: var(--container-tablet);
+    max-width: 100%;
   }
 }
 

@@ -7,6 +7,33 @@
 
   document.addEventListener('DOMContentLoaded', () => {
 
+    /* ---- Hero 롤링 동적 복제 (섹션 1) ---- */
+    document.querySelectorAll('.hero__track').forEach(track => {
+      const rows = Array.from(track.querySelectorAll('.hero__row'));
+      if (!rows.length) return;
+
+      const primaryRow = rows[0];
+      const origItems  = Array.from(primaryRow.children);
+      if (!origItems.length) return;
+
+      const itemW = parseFloat(getComputedStyle(origItems[0]).width) || 100;
+      const rsStyle = getComputedStyle(primaryRow);
+      const gapW  = parseFloat(rsStyle.columnGap || rsStyle.gap) || 12;
+
+      // 각 row가 뷰포트 2× 이상이 돼야 calc(-50%) 애니메이션에서 빈 공간 없음
+      const currentW = origItems.length * (itemW + gapW) - gapW;
+      const targetW  = window.innerWidth * 2;
+      const addCount = Math.max(0, Math.ceil((targetW - currentW) / (itemW + gapW))) + 2;
+
+      // 모든 row에 동일 아이템 복제 (calc(-50%) 루프 유지)
+      for (let i = 0; i < addCount; i++) {
+        const srcItem = origItems[i % origItems.length];
+        rows.forEach(row => row.appendChild(srcItem.cloneNode(true)));
+      }
+
+      track.style.animationPlayState = 'running';
+    });
+
     /* ---- kid-sci/kid-ma 롤링 표지 동적 복제 (섹션 8, 9, 10) ---- */
     document.querySelectorAll('.kid-sci__rolling-track').forEach(track => {
       const origItems = Array.from(track.children);

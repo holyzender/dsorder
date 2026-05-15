@@ -90,6 +90,7 @@
   width: max-content;
   gap: 12px;
   animation: hero-roll 30s linear infinite;
+  animation-play-state: paused; /* JS가 복제 완료 후 running으로 변경 */
 }
 .hero__track--bottom {
   animation-name: hero-roll-reverse;

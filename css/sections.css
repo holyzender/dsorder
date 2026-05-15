@@ -205,7 +205,7 @@
 .concerns__item {
   display: flex;
   align-items: center;
-  height: 120px;
+  height: 127px;
   border-bottom: 1px solid #CCE7FF;
 }
 .concerns__item--last {
@@ -234,6 +234,7 @@
   line-height: 20px;
   font-weight: 400;
   color: #212121;
+  letter-spacing: -0.56px;
 }
 .concerns__body strong {
   font-weight: 700;

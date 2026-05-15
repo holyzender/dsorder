@@ -201,18 +201,41 @@
     align-items: flex-start;
     justify-content: center;
     padding: 120px max(20px, calc((100% - 1080px) / 2));
-    gap: 60px;
+    gap: 20px;
   }
   .concerns__title {
-    flex: 0 0 380px;
+    flex: 1;
     text-align: left;
-    font-size: 40px;
-    line-height: 56px;
-    padding-top: 20px;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -1.44px;
   }
   .concerns__list {
     flex: 0 0 490px;
     max-width: 490px;
+  }
+  .concerns__item {
+    height: 168px;
+  }
+  .concerns__item:first-child {
+    height: 176px;
+  }
+  .concerns__content {
+    gap: 20px;
+  }
+  .concerns__media {
+    width: 160px;
+    height: 100%;
+  }
+  .concerns__media--phone .concerns__img,
+  .concerns__media--dots .concerns__img,
+  .concerns__media--money .concerns__img,
+  .concerns__media--ai .concerns__img {
+    width: 140px;
+    height: 140px;
+    left: 10px;
+    top: 18px;
+    transform: none;
   }
   .concerns__label {
     font-size: 24px;
@@ -222,6 +245,7 @@
   .concerns__body {
     font-size: 16px;
     line-height: 24px;
+    letter-spacing: -0.64px;
   }
 
   /* ── Section 4: Reasons ── */

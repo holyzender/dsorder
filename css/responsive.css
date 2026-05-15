@@ -237,6 +237,14 @@
     top: 18px;
     transform: none;
   }
+  /* 그림자: 이미지 바로 아래(top:18+140=158px)에 고정, 영상 위에 렌더링 */
+  .concerns__shadow {
+    top: 158px;
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
   .concerns__label {
     font-size: 24px;
     line-height: 28px;

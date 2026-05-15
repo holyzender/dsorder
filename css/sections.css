@@ -952,6 +952,7 @@
   display: flex;
   gap: 12px;
   width: max-content;
+  animation-play-state: paused; /* JS가 복제 완료 후 running으로 변경 */
 }
 .kid-sci__rolling-track--left {
   animation: kid-left 8s linear infinite;

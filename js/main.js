@@ -12,13 +12,22 @@
       const origItems = Array.from(track.children);
       const setSize = Math.round(origItems.length / 2);
       if (setSize <= 0) return;
-      const oneSet = origItems.slice(0, setSize);
-      const coverW = parseFloat(getComputedStyle(oneSet[0]).width) || 100;
-      const gapW   = parseFloat(getComputedStyle(track).gap)       || 12;
-      while (track.scrollWidth < window.innerWidth * 3) {
-        oneSet.forEach(item => track.appendChild(item.cloneNode(true)));
+
+      // 커버 폭·갭: CSS 계산값 (없으면 기본값)
+      const coverW = parseFloat(getComputedStyle(origItems[0]).width) || 100;
+      const tsStyle = getComputedStyle(track);
+      const gapW   = parseFloat(tsStyle.columnGap || tsStyle.gap) || 12;
+      const setW   = setSize * (coverW + gapW); // 한 세트 순환 거리
+
+      // scrollWidth 의존 제거 → 뷰포트 기준 수학적 계산
+      const existingSets = 2; // HTML에 이미 2세트 작성됨
+      const setsNeeded   = Math.ceil(window.innerWidth * 4 / setW) + existingSets + 2;
+      for (let s = existingSets; s < setsNeeded; s++) {
+        origItems.slice(0, setSize).forEach(item => track.appendChild(item.cloneNode(true)));
       }
-      track.style.setProperty('--roll-dist', `${setSize * (coverW + gapW)}px`);
+
+      track.style.setProperty('--roll-dist', `${setW}px`);
+      track.style.animationPlayState = 'running'; // 복제 완료 후 애니메이션 시작
     });
 
     /* ---- s14 Logo Roll 거리 계산 (섹션 14) ---- */
